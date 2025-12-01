@@ -38,7 +38,7 @@ export const Orders = () => {
         const orderEmployee = findEmployee(order)
         const orderProduct = findProduct(order)
 
-        html += `<li data-type="order" data-orderid="${order.id}" data-opid="${orderProduct.id}" data-oeid="${orderEmployee.id}">${orderProduct.name} was sold by ${orderEmployee.name} on ${new Date(order.timestamp).toLocaleDateString()}</li>`
+        html += `<li data-type="order" data-orderid="${order.id}" data-opid="${order.productId}" data-oeid="${order.employeeId}">${orderProduct.name} was sold by ${orderEmployee.name} on ${new Date(order.timestamp).toLocaleDateString()}</li>`
     }
 
     html += "</ul>"
